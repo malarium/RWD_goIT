@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main__primary,
+.main__secondary {
+  margin: auto;
+  width: 80%;
+  height: 300px;
+  background-color: green;
+}
+@media (min-width: 600px) {
+  .main__primary,
+  .main__secondary {
+    width: 40%;
+    background-color: red;
+  }
+  .main {
+    flex-direction: row;
+  }
+}
+
+// @media (orientation: landscape) {
+//   .main {
+//     flex-direction: row;
+//   }
+// }

@@ -1,0 +1,33 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: aliceblue;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin header-elem {
+  background-color: red;
+  height: 60px;
+  margin: 10px;
+}
+
+.header__elem {
+  &--logo {
+    @include header-elem;
+
+    flex: 1;
+    max-width: 80px;
+  }
+  &--banner {
+    @include header-elem;
+    flex: 2;
+  }
+  &--menu {
+    @include header-elem;
+    flex: 1;
+    max-width: 80px;
+  }
+}

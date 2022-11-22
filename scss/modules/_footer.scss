@@ -1,0 +1,52 @@
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.footer__column {
+  &--left {
+    height: 200px;
+    width: 80%;
+    background-color: blue;
+  }
+  &--center {
+    height: 200px;
+    width: 80%;
+    background-color: violet;
+  }
+  &--right {
+    height: 200px;
+    width: 80%;
+    background-color: yellow;
+  }
+}
+
+@media (min-width: 600px) {
+  .footer {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+@media (pointer: coarse) {
+  .footer__column--left {
+    background-color: darkred;
+  }
+}
+
+@mixin retina {
+  @media screen and (min-resolution: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@include retina() {
+  .footer__column--center {
+    background-color: deeppink;
+  }
+}
